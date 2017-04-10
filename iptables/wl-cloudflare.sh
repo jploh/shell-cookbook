@@ -27,3 +27,4 @@ iptables -A $CHAIN -p tcp -s 190.93.240.0/20 --dport 80 -m state --state NEW,REL
 iptables -A $CHAIN -p tcp -s 197.234.240.0/22 --dport 80 -m state --state NEW,RELATED,ESTABLISHED -j ACCEPT
 iptables -A $CHAIN -p tcp -s 198.41.128.0/17 --dport 80 -m state --state NEW,RELATED,ESTABLISHED -j ACCEPT
 iptables -A $CHAIN -p tcp -s 199.27.128.0/21 --dport 80 -m state --state NEW,RELATED,ESTABLISHED -j ACCEPT
+iptables -A $CHAIN -j RETURN
